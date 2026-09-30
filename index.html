@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Sogio &amp; Danet — 28.07.26</title>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<nav><a href="#top">Home</a><a href="#story">Our story</a><a href="#itinerary">Itinerary</a><a href="#location">Location</a></nav>
+<header class="hero" id="top"><div>
+<h1 class="names script">Sogio &amp; Danet</h1>
+<p class="date" aria-label="28 July 2026"><span><b>16</b></span><i>·</i><span><b>11</b></span><i>·</i><span><b>26</b></span></p>
+<svg class="swans" viewBox="0 0 120 70" aria-hidden="true"><path d="M52 58c-14 0-22-8-24-18 6 4 12 4 16 0-8-4-10-14-6-24 3-6 10-6 11 0 0 5-4 8-6 6"/><path d="M68 58c14 0 22-8 24-18-6 4-12 4-16 0 8-4 10-14 6-24-3-6-10-6-11 0 0 5 4 8 6 6"/><path d="M40 60c10 6 30 6 40 0"/></svg>
+<p class="tag">Join us to celebrate our day!</p></div><div class="cue"></div></header>
+<section class="gallery"><figure class="rv"><img src="images/p1.jpg" alt="Couple holding hands by a statue"></figure><figure class="rv" style="transition-delay:.15s"><img src="images/p2.jpg" alt="Couple in a rowboat on the lake"></figure><figure class="rv" style="transition-delay:.3s"><img src="images/p3.jpg" alt="Couple running through a meadow"></figure></section>
+<section class="story" id="story"><div class="in"><div class="stack rv"><img src="images/s1.jpg" alt=""><img src="images/s2.jpg" alt=""><img src="images/s3.jpg" alt=""></div>
+<div class="txt rv"><h2 class="script">Our Story</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div></div></section>
+<section class="iti" id="itinerary"><h2 class="script rv">Itinerary</h2><div class="grid">
+<div class="item rv"><svg viewBox="0 0 64 64"><path d="M32 30c-8-4-12-12-6-18 4 2 6 6 6 10 0-4 2-8 6-10 6 6 2 14-6 18zM32 30v22M24 52l8-6 8 6"/></svg><span>Dress rehearsal</span></div>
+<div class="item rv" style="transition-delay:.1s"><svg viewBox="0 0 64 64"><rect x="18" y="8" width="28" height="38" rx="2"/><path d="M24 18h16M24 26h16M32 40c-4-3-6-5-6-7s3-3 6 0c3-3 6-2 6 0s-2 4-6 7zM24 46l-6 12M40 46l6 12"/></svg><span>Evening dinner</span></div>
+<div class="item rv" style="transition-delay:.2s"><svg viewBox="0 0 64 64"><path d="M14 56V34l18-10 18 10v22zM32 24V8M28 12h8M26 56V44h12v12"/></svg><span>Wedding ceremony</span></div>
+<div class="item rv"><svg viewBox="0 0 64 64"><circle cx="24" cy="42" r="14"/><circle cx="42" cy="42" r="14"/><path d="M18 20l6-8h8l6 8-10 10z"/></svg><span>Wedding photos</span></div>
+<div class="item rv" style="transition-delay:.1s"><svg viewBox="0 0 64 64"><path d="M14 8h16c0 12-3 20-8 22-5-2-8-10-8-22zM34 8h16c0 12-3 20-8 22-5-2-8-10-8-22zM22 30v24M42 30v24M14 56h16M34 56h16"/></svg><span>Wedding reception</span></div>
+<div class="item rv" style="transition-delay:.2s"><div class="script" style="font-size:34px;height:64px;display:grid;place-items:center;color:var(--green)">Mr &amp; Mrs</div><span>Forever</span></div></div></section>
+<section class="loc" id="location"><div class="in"><div class="txt rv"><h2 class="script">Location</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><div class="addr">Marriage Hotel<br>123 Wedding Street<br>ABC 123</div></div>
+<img class="rv" src="images/loc.jpg" alt="Willow tree and swans by the water" style="transition-delay:.15s"></div></section>
+<footer class="script">Sogio &amp; Danet</footer>
+<iframe id="yt" title="Background music" allow="autoplay" tabindex="-1" aria-hidden="true"></iframe>
+<script src="script.js"></script>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const g=[...document.querySelectorAll('.gallery figure')];
+addEventListener('scroll',()=>{const y=scrollY*.04;g.forEach((f,i)=>f.style.setProperty('--py',(i%2?0:-1)*Math.min(y,24)+'px'))},{passive:true});
+</script></body></html>
